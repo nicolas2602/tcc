@@ -1,26 +1,3 @@
-<?php
-include'connect.php';
-
-if(isset($_POST['sub'])){
-    $email=$_POST['email'];
-    $senha=$_POST['senha'];
-
-    $selec= "select * from cadastro where username='$email' and password= '$senha'";   
-
-   $querySelect= mysqli_query($con, $select);
-   
-   if(mysqli_num_rows($qu)>0){
-      $f= mysqli_fetch_assoc($qu);
-      $_SESSION['id']=$f['id'];
-      header ('location:home.php');
-   }
-   else{
-       echo 'E-mail e senha não existem';
-   }
-  
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
