@@ -1,3 +1,6 @@
+<?php include 'conexao.php' ?>
+<?php include 'php/insert.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,7 @@
 
 <div class="login-box">
   <h2>Cadastro</h2>
-  <form enctype="multipart/form-data" method="POST" action="I_Cadastro.php">
+  <form enctype="multipart/form-data" method="POST">
   
   <div class="user-box">
       <input type="text" name="nome" required="">
@@ -39,13 +42,12 @@
       <label>Confirmar senha</label>
     </div>
 
-    <a name="cad">
+    <input type="submit" name="cad">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Cadastrar
-    </a>
+    </input>
 
   </form>
 </div>

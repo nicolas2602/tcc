@@ -1,3 +1,6 @@
+<?php include 'conexao.php' ?>
+<?php include 'php/select.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
 
 <div class="login-box">
   <h2>Login</h2>
-  <form>
+  <form method="POST">
     <div class="user-box">
       <input type="email" name="email" required="">
       <label>E-mail</label>
@@ -20,13 +23,12 @@
       <input type="password" name="senha" required="">
       <label>Senha</label>
     </div>
-    <a href="#">
+    <input type="submit" href="#" name="sub">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Submit
-    </a>
+    </input>
   </form>
 </div>
 
