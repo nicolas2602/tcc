@@ -1,7 +1,7 @@
 <?php
 include 'conexao.php';
 if(isset($_POST['reg'])){
-    $end=$_POST['endereco'];
+    $end=$_POST['endereCo'];
     $cep=$_POST['CEP'];
     $email=$_POST['email'];
     $pag=$_POST['pagamento'];
