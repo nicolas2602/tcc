@@ -148,8 +148,8 @@ while($f=  mysqli_fetch_assoc($qu)){
 
     <div class="form-group">
     <label for="pagamento" class="text-left"><b style="color:black">Pacote Selecionado:</b></label>
-    <select class="form-control col-sm-3" id="pagamento" name="pacote" required="required">
-       <option>...</option>
+    <select class="form-control col-sm-3" id="pagamento" name="pacote" required="Selecione o pacote">
+       <option value="">...</option>
        <option value="Standart">Standart</option>
        <option value="Prime">Prime</option>
        <option value="MEGA ULTRA PREMIUM DELUX">MEGA ULTRA PREMIUM DELUX</option>
@@ -158,8 +158,8 @@ while($f=  mysqli_fetch_assoc($qu)){
 
     <div class="form-group">
     <label for="pagamento" class="text-left"><b style="color:black">Formas de Pagamento:</b></label>
-    <select class="form-control col-sm-3" id="pagamento" name="pagamento" required="required">
-       <option>...</option>
+    <select class="form-control col-sm-3" id="pagamento" name="pagamento" required>
+       <option value="">...</option>
        <option value="Dinheiro">Dinheiro</option>
        <option value="Cartão de Crédito">Cartão de Crédito</option>
        <option value="Cartão de Débito">Cartão de Débito</option>
@@ -182,6 +182,9 @@ while($f=  mysqli_fetch_assoc($qu)){
     </div>  
    
    </main>
+   
+   <?php include 'include/footer.php';?>
+
  </form>
 </body>
 </html>

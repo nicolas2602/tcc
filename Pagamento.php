@@ -8,7 +8,6 @@
    <title>Avaliação</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="Tcc.css">
   </head>
@@ -51,8 +50,8 @@
     <div class="form-group">
      <div class="col">
     <label for="pagamento" class="text-left"><b style="color:black">Formas de Pagamento:</b></label>
-    <select class="form-control " id="pagamento" name="pagamento" required="required">
-       <option>...</option>
+    <select class="form-control " id="pagamento" name="pagamento" required>
+       <option value="">...</option>
        <option value="Dinheiro">Dinheiro</option>
        <option value="Cartão de Crédito">Cartão de Crédito</option>
        <option value="Cartão de Débito">Cartão de Débito</option>
@@ -77,13 +76,20 @@
     </div>  
    
    </main>
+   
   </form>
+
+
    <script>
     function pago()
      {
          alert("Deseja concluir o pagamento?");
      }
-    
     </script>
+
+
 </body>
+
+
+
 </html>
