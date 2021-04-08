@@ -29,9 +29,6 @@
     			<li class="nav-item">
     				<a href="login.php" class="nav-link btn btn-dark"><img alt="login" src="login_icon.png" width="30px"></a>
     			</li>
-    			<li class="nav-item">
-          <a href="#" class="nav-link btn btn-dark"><img alt="perfil" src="perfil_icon.png" width="30px"></a>
-    			</li>
           <li class="nav-item">
     				<a href="pdf/quem_somos.pdf" class="nav-link btn btn-dark"><img alt="info" src="info_icon.png" width="30px"></a>
     			</li>
