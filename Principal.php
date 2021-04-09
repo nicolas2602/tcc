@@ -1,16 +1,17 @@
 <?php include 'php/conexao.php';?>
-<?php include 'php/insert3.php';?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Tcc.css">
     <link rel="stylesheet" type="text/css" href="navbar.css">
     <title>XMAX</title>
+
 </head>
 
 <body>
@@ -27,7 +28,10 @@
     				<a href="Principal.php" class="nav-link btn btn-dark">Inicio<span class="sr-only">(atual)</span></a>
     			</li>
     			<li class="nav-item">
-    				<a href="login.php" class="nav-link btn btn-dark"><img alt="login" src="login_icon.png" width="30px"></a>
+    				<a href="login.php" class="nav-link btn btn-dark" onclick="login()"><img alt="login" src="login_icon.png" width="30px"></a>
+    			</li>
+          <li class="nav-item">
+    				<a href="users.php" class="nav-link btn btn-dark"><img alt="login" src="perfil_icon.png" width="30px"></a>
     			</li>
           <li class="nav-item">
     				<a href="pdf/quem_somos.pdf" class="nav-link btn btn-dark"><img alt="info" src="info_icon.png" width="30px"></a>
@@ -39,48 +43,32 @@
     			<button type="submit" class="btn btn-dark"><img alt="pesquisa" src="src_icon.png" width="40px"></button>
     		</form>
     	</div>
-    </nav>
+
+   <script>
+
+      function login(id) {
+       var resposta = confirm("Deseja sair do site?");
+       if (resposta == true) {
+          window.location.href = "Principal.php?id="+id;
+       }
+       else{
+         return false;
+       }
+     }
+
+  </script>
+
+</nav>
+    
+ 
 
 <form method="post" enctype="multipart/form-data">
 
 <div id="menu">
 
-<center><div class="logo"><img src="logo1.png" alt="logo"></div><center/>
+<center><div class="logo"><img src="logo1.png" alt="logo"></div></center>
 
-<main role="main" class="container-fluid col-sm-10">
-<div class="jumbotron bg-white rounded">
 
-<h2>Perfil</h2>
-
-<?php
-$sq="select * from registro";
-$qu=mysqli_query($con,$sq);
-while($f=  mysqli_fetch_assoc($qu)){
-?>
-<div class="row justify-content-center">
-      <div class="form-group col-md-3">
-      <img src="<?php echo $f['imagem'];?>" width="200px" height="200px">
-      </div>
-</div>
-
-<div class="row justify-content-center">
-
-      <div class="form-group col-md-5">
-      <b>Nome:</b>
-         <label class="form-control mb-2 mr-sm-2"><?php echo $f['nomeCadastro'];?></label>
-      </div>
-      <br><br>
-    
-      <div class="form-group col-md-7">
-       <b>E-mail:</b>
-       <label class="form-control mb-2 mr-sm-2"><?php echo $f['emailCadastro'];?></label>
-      </div>
-     </div>
-
-<?php } ?>
-
-</div>
-</main>
 
   </center>
 <main role="main" class="container col-sm-10">
@@ -144,56 +132,12 @@ while($f=  mysqli_fetch_assoc($qu)){
      </select>
   </center>
   </div>
+<center>
+  <a href="compra.php" style="margin-top: 10px;" class="btn btn-lg btn-success btn-block col-5" type="submit" name="log">Pagamento</a>
+</center>
 </main>
   
-<center>
-  <main role="main" id="pizzaApp" class="container col-sm-10">
-    
-  <div class="jumbotron bg-light rounded">
-   
-  <p><div class="form-group">
-     <div class="form-group">
-     <div class="col">
-      <label class="text-left"><b style="color:black">Endereço:</b></label>
-      <input type="text" name="endereco" class="form-control col-sm-3" placeholder="Insira o endereço" required autofocus>
-      </div>
-    </div>
 
-    <div class="form-group">
-    <label for="pagamento" class="text-left"><b style="color:black">Pacote Selecionado:</b></label>
-    <select class="form-control col-sm-3" id="pagamento" name="pacote" required="Selecione o pacote">
-       <option value="">...</option>
-       <option value="Standart">Standart</option>
-       <option value="Prime">Prime</option>
-       <option value="MEGA ULTRA PREMIUM DELUX">MEGA ULTRA PREMIUM DELUX</option>
-    </select><br/>
-    </div>  
-
-    <div class="form-group">
-    <label for="pagamento" class="text-left"><b style="color:black">Formas de Pagamento:</b></label>
-    <select class="form-control col-sm-3" id="pagamento" name="pagamento" required>
-       <option value="">...</option>
-       <option value="Dinheiro">Dinheiro</option>
-       <option value="Cartão de Crédito">Cartão de Crédito</option>
-       <option value="Cartão de Débito">Cartão de Débito</option>
-    </select><br/>
-
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-      <label class="form-check-label" for="dropdownCheck">
-        Concordo que li e aceito os termos do serviço e diretrizes
-      </label>
-     </div>
-<br>
-     <div>
-     <center>
-     <button type="submit" class="btn btn-primary col-sm-3" style="color:white; align: left;" name="pag"><b>Comprar</b></button>
-     </center>
-     </div>
-      
-      </div>
-    </div>  
-   </main>
  </form>
 
  <footer class="my-5 pt-5 text-muted text-center text-small">
@@ -204,6 +148,7 @@ while($f=  mysqli_fetch_assoc($qu)){
 				<li class="list-inline-item"><a href="#">Suporte</a></li>
 			</ul>
 		</footer>
+
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

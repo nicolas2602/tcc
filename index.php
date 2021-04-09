@@ -50,10 +50,10 @@
                     </label></center>
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit" onclick="cadastro()" name="reg">Cadastrar</button>
+                <button class="btn btn-lg btn-success btn-block" type="submit" value="submit" onclick="cadastro()" name="reg">Cadastrar</button>
 
             </form>
-            <a href="login.php"><button style="margin-top: 5px;" class="btn btn-lg btn-dark btn-block" type="submit">Se já é cadastrado faça Login</button></a>
+            <a href="login.php"><button style="margin-top: 5px;" class="btn btn-lg btn-primary btn-block" type="submit">Se já é cadastrado faça Login</button></a>
     </div>
 
 </form>

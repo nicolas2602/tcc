@@ -28,7 +28,7 @@
 
             </form>
 
-            <a href="index.php"><button style="margin-top: 3px;" class="btn btn-lg btn-secondary btn-block" type="submit">Cadastra-se</button></a>
+            <a href="index.php"><button style="margin-top: 3px;" class="btn btn-lg btn-success btn-block" type="submit">Criar nova conta</button></a>
 
 
 	</div>
