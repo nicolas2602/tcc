@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="Tcc.css">
+    <link rel="stylesheet" type="text/css" href="css/Tcc.css">
     <link rel="stylesheet" type="text/css" href="navbar.css">
     <title>XMAX</title>
 
@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-    	<a class="navbar-brand" href="#"><img alt="menu" src="menu_icon.png" width="50px"></a>
+    	<a class="navbar-brand" href="#"><img alt="menu" src="imagens/menu_icon.png" width="50px"></a>
     	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
     	</button>
@@ -28,23 +28,23 @@
     				<a href="Principal.php" class="nav-link btn btn-dark">Inicio<span class="sr-only">(atual)</span></a>
     			</li>
     			<li class="nav-item">
-    				<a href="login.php" class="nav-link btn btn-dark" onclick="login()"><img alt="login" src="login_icon.png" width="30px"></a>
+    				<a href="login.php" class="nav-link btn btn-dark" onclick="login()"><img alt="login" src="imagens/login_icon.png" width="30px"></a>
     			</li>
           <li class="nav-item">
-    				<a href="users.php" class="nav-link btn btn-dark"><img alt="login" src="perfil_icon.png" width="30px"></a>
+    				<a href="users.php" class="nav-link btn btn-dark"><img alt="login" src="imagens/perfil_icon.png" width="30px"></a>
     			</li>
           <li class="nav-item">
-    				<a href="pdf/quem_somos.pdf" class="nav-link btn btn-dark"><img alt="info" src="info_icon.png" width="30px"></a>
+    				<a href="pdf/quem_somos.pdf" class="nav-link btn btn-dark"><img alt="info" src="imagens/info_icon.png" width="30px"></a>
     			</li>
     		</ul>
 
     		<form class="form-inline mt-02 mt-md-0">
     			<input type="text" class="form-control mr-sm-2" placeholder="Pesquisar" aria-label="Pesquisar">
-    			<button type="submit" class="btn btn-dark"><img alt="pesquisa" src="src_icon.png" width="40px"></button>
+    			<button type="submit" class="btn btn-dark"><img alt="pesquisa" src="imagens/src_icon.png" width="40px"></button>
     		</form>
     	</div>
 
-   <script>
+  <script>
 
       function login(id) {
        var resposta = confirm("Deseja sair do site?");
