@@ -4,8 +4,8 @@ include 'conexao.php';
 if(isset($_POST['log'])){
     $email=$_POST['email'];
     $senha=$_POST['senha'];
-    $select= "select * from registro where emailCadastro='$email' and senhaCadastro= '$senha'";   
-   $qu= mysqli_query($con, $select);
+    $s= "select * from registro where emailCadastro='$email' and senhaCadastro= '$senha'";   
+    $qu= mysqli_query($con, $s);
    
    if(mysqli_num_rows($qu)>0){
       $f= mysqli_fetch_assoc($qu);
@@ -13,7 +13,7 @@ if(isset($_POST['log'])){
       header ('location:Principal.php');
    }
    else{
-       echo 'username or password does not exist';
+       echo '<font style="color:red;">E-mail e senha incorretos!</font>';
    }
   
 }
