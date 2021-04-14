@@ -1,12 +1,12 @@
 <center>
-  <button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+  <button class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
     <img alt="Login" src="Imagens/login_icon.png" width="30px">
   </button>
 </center>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content bg-light">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Deseja sair do site?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

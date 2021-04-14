@@ -1,5 +1,5 @@
 <?php include 'php/conexao.php';?>
-<?php include 'php/selecionar.php';?>
+<?php include 'php/select.php';?>
 
 <!DOCTYPE html>
 <html lang="pt">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/Tcc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>XMAX Login</title>
+    <title>X-MAX Login</title>
 </head>
 <body>
 <br>
@@ -23,9 +23,12 @@
 				
                 
                 <input type="password" name='senha' id="inputPassword" class="form-control" placeholder="Senha" required>
-
+                 
+                 <hr>
                 
-                <button style="margin-top: 10px;" class="btn btn-lg btn-primary btn-block" type="submit" name="log">Entrar</button>
+                <button style="margin-top: 10px;" class="btn btn-lg btn-primary btn-block" type="submit" name="log">
+                   Entrar
+                </button>
 
             </form>
 

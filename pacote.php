@@ -1,6 +1,6 @@
 <?php include 'php/conexao.php';?>
 <?php include 'php/insert3.php';?>
-<?php include 'php/selecionar2.php';?>
+<?php include 'php/select2.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/Tcc.css">
         <link rel="stylesheet" type="text/css" href="navbar.css">
-        <title>XMAX</title>
+        <title>X-MAX</title>
     </head>
 
     <body>
@@ -22,9 +22,9 @@
 
       <div id="menu">
 
-      <center><div class="logo"><img src="Imagens/logo1.png" alt="logo"></div></center>
+      <!-- <center><div class="logo"><img src="Imagens/logo1.png" alt="logo"></div></center> -->
 
-
+            <hr>
 
         </center>
       <main role="main" class="container col-sm-10">
@@ -46,14 +46,11 @@
                 <p class="card-text">Preço: FREE</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Programa de monitoramento </li>
+                <li class="list-group-item">Programa de escaneamento</li>
+                <li class="list-group-item">Criptografia e backup com sombra 30G</li>
               </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+             
         </div>
 
 
@@ -68,14 +65,11 @@
                   <p class="card-text">Preço: R$ 1.199,00</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
+                  <li class="list-group-item">Programa de escaneamento e monitoramento</li>
+                  <li class="list-group-item">Suporte especial e técnico</li>
+                  <li class="list-group-item">Sem limite de dados de backups</li>
                 </ul>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
+               
         </div>
 
         <div class="card col-sm" style="width: 25rem;">
@@ -88,14 +82,10 @@
                 <p class="card-text">Preço: R$ R$ 2.299,00</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Todas as anteriores (Standart e Premium)</li>
+                <li class="list-group-item">Programa de ajuda e suporte a códigos PHP, SQL e JavaScript</li>
               </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+              
         </div>
       </div>
 

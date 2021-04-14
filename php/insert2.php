@@ -13,6 +13,6 @@ if(isset($_POST['reg'])){
 
     $i="insert into registro(emailCadastro,nomeCadastro,senhaCadastro,csenhaCadastro,imagem) values ('$u','$t','$c','$g','$img')";
     mysqli_query($con, $i);
-    header ('location:Principal.php');
+    header ('location:login.php');
 }
 ?>

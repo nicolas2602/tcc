@@ -9,7 +9,7 @@ if(isset($_POST['log'])){
    
    if(mysqli_num_rows($qu)>0){
       $f= mysqli_fetch_assoc($qu);
-      $_SESSION['id']=$f['id'];
+      $_SESSION['IdRegistro']=$f['IdRegistro'];
       header ('location:Principal.php');
    }
    else{
