@@ -2,8 +2,17 @@ Create Database tcc;
 
 CREATE TABLE registro( 
 IdRegistro int PRIMARY KEY AUTO_INCREMENT, 
-emailCadastro varchar(50) not null, 
 nomeCadastro varchar(50) not null, 
+dataN varchar(50) not null,
+genero varchar(50) not null,
+endereco varchar(50) not null,
+cidade varchar(50) not null,
+estado varchar(50) not null,
+cep varchar(50) not null,
+tel1 varchar(50) not null,
+tel2 varchar(50) not null,
+cpf varchar(50) not null,
+emailCadastro varchar(50) not null, 
 senhaCadastro varchar(50) not null, 
 csenhaCadastro varchar(50) not null,
 imagem varchar(50) not null 
