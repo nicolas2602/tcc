@@ -15,7 +15,13 @@ cpf varchar(50) not null,
 emailCadastro varchar(50) not null, 
 senhaCadastro varchar(50) not null, 
 csenhaCadastro varchar(50) not null,
-imagem varchar(50) not null 
+imagem varchar(50) not null,
+empresa varchar(50) not null,
+cnpj varchar(50) not null,
+nomeEmpresa varchar(50) not null,
+tservico varchar(50) not null,
+endEmpresa varchar(50) not null,
+parceria varchar(50) not null
 );
 
 CREATE TABLE info( 

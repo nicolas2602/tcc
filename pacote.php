@@ -43,7 +43,7 @@
               
             <div class="card-body bg-danger text-white">
                 <h5 class="card-title">Standart</h5>
-                <p class="card-text">Preço: FREE</p>
+                <h1 class="card-title pricing-card-title">FREE</h1>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Programa de monitoramento </li>
@@ -62,10 +62,10 @@
                 
               <div class="card-body bg-secondary text-white">
                   <h5 class="card-title">Prime</h5>
-                  <p class="card-text">Preço: R$ 1.199,00</p>
+                  <h1 class="card-title pricing-card-title">R$ 1.199,00</h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Programa de escaneamento e monitoramento</li>
+                  <li class="list-group-item">Programa de escaneamento</li>
                   <li class="list-group-item">Suporte especial e técnico</li>
                   <li class="list-group-item">Sem limite de dados de backups</li>
                 </ul>
@@ -79,7 +79,7 @@
               
             <div class="card-body bg-warning text-white">
                 <h5 class="card-title">MEGA ULTRA PREMIUM DELUXE</h5>
-                <p class="card-text">Preço: R$ R$ 2.299,00</p>
+                <h1 class="card-title pricing-card-title">R$ 2.299,00</h1>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Todas as anteriores (Standart e Premium)</li>
