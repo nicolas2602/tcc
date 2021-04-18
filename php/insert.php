@@ -20,7 +20,8 @@ if(isset($_POST['reg'])){
    $tserviço=$_POST['tserviço'];
    $end=$_POST['end'];
    $parceria=$_POST['parceria'];
-
+ 
+   if($senha == $rsenha){
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
         $img="perfil/".$_FILES['f1']['name'];
@@ -31,7 +32,12 @@ if(isset($_POST['reg'])){
         values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senha','$rsenha','$img',
                 '$empresa','$cnpj','$nempresa','$tserviço','$end','$parceria')";
                 
-    mysqli_query($con, $i);
-    header ('location:index.php');
+        mysqli_query($con, $i);
+        header ('location:index.php');
+
+    }
+    else{
+        echo 'Senhas não identificadas!';
+    }
 }
 ?>

@@ -8,6 +8,8 @@ if(isset($_POST['reg'])){
     $c=$_POST['senha'];
     $g=$_POST['csenha'];
 
+    if($c == $g){
+        
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
         $img="perfil/".$_FILES['f1']['name'];
@@ -16,12 +18,18 @@ if(isset($_POST['reg'])){
         $img=$_POST['img1'];
     }
 
-    $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$c',csenhaCadastro='$g',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
-    mysqli_query($con, $i);
-    header('location:Principal.php');
+        $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$c',csenhaCadastro='$g',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
+        mysqli_query($con, $i);
+        header('location:Principal.php');
+    
+    }
+    else{
+        echo 'Senhas não identificadas';
+    }
 }
 
     $s="select * from registro where IdRegistro='$_SESSION[IdRegistro]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu);
-    ?> 
+
+?> 
