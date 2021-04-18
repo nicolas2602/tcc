@@ -13,6 +13,10 @@ body{
     top: 100px;
     left: 200px;
 }
+#mostrar{
+    display: none;
+}
+    
 .carousel-control-prev,
 .carousel-control-next{
   height: 50px;

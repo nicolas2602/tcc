@@ -18,10 +18,11 @@ if(isset($_POST['reg'])){
    $cnpj=$_POST['cnpj'];
    $nempresa=$_POST['nempresa'];
    $tserviço=$_POST['tserviço'];
-   $end=$_POST['end'];
+   $endem=$_POST['endem'];
    $parceria=$_POST['parceria'];
  
    if($senha == $rsenha){
+
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
         $img="perfil/".$_FILES['f1']['name'];
@@ -30,7 +31,7 @@ if(isset($_POST['reg'])){
     $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,csenhaCadastro,imagem,
                             empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria) 
         values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senha','$rsenha','$img',
-                '$empresa','$cnpj','$nempresa','$tserviço','$end','$parceria')";
+                '$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria')";
                 
         mysqli_query($con, $i);
         header ('location:index.php');
