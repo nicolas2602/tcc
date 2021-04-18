@@ -1,8 +1,7 @@
 <?php
 
-if(!isset($_SESSION['id'])){
-    header ('location: reg.php');
+if($_SESSION['profile']!='Admin'){
+    header ('location:Principal.php');
 }
-
 
 ?>

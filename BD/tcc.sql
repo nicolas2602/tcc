@@ -1,5 +1,5 @@
 Create Database tcc;
-
+------------------------------------------------------------------------
 CREATE TABLE registro( 
 IdRegistro int PRIMARY KEY AUTO_INCREMENT, 
 nomeCadastro varchar(50) not null, 
@@ -23,14 +23,26 @@ tservico varchar(50) not null,
 endEmpresa varchar(50) not null,
 parceria varchar(50) not null
 );
-
-CREATE TABLE info( 
-IdInfo int PRIMARY KEY AUTO_INCREMENT, 
-enderecoInfo varchar(50) not null, 
-pacoteInfo varchar(50) not null, 
-fpagoInfo varchar(50) not null
+--------------------------------------------------------------------------
+create table profile_reg(
+idProfile INT PRIMARY KEY AUTO_INCREMENT,
+nameProfile varchar(50)
 );
 
+insert into profile_reg(nameProfile) values ('Admin'), ('User');
+
+select * from profile_reg;
+
+alter table registro
+ADD fk_idProfile int,
+ADD FOREIGN KEY(fk_idProfile) REFERENCES profile_reg(idProfile);
+---------------------------------------------------------------------------
+CREATE TABLE pacote( 
+IdPacote int PRIMARY KEY AUTO_INCREMENT, 
+donoPacote varchar(50) not null, 
+nomePacote varchar(50) not null
+);
+---------------------------------------------------------------------------
 CREATE TABLE pagamento(
 IdPagamento int PRIMARY KEY AUTO_INCREMENT, 
 enderecoPag varchar(50) not null, 

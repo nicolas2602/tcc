@@ -1,6 +1,7 @@
 <?php 
     include 'php/conexao.php';
     include 'php/select2.php';
+    include 'php/check.php';
 ?>
 
 
@@ -19,42 +20,44 @@
   <body>
 
       <?php include 'include/nav.php';?> 
-
-      <table class="table table-borderless text-center">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">E-mail</th>
-            <th scope="col">Foto</th>
-          </tr>
-        </thead>
-        
-
-        <?php
-          $sq="select * from registro";
-          $qu=mysqli_query($con,$sq);
-          while($f=  mysqli_fetch_assoc($qu)){
-        ?>
+      
+      <form method="POST" enctype="multipart/form-data">
+        <table class="table table-borderless text-center">
+          <thead class="thead-dark">
             <tr>
-                <td>
-                  <?php echo $f['nomeCadastro']?>
-                </td>
-                
-                <td>
-                  <?php echo $f['emailCadastro']?>
-                </td>
-
-                <td>
-                  <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
-                </td>
+              <th scope="col">Nome</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Foto</th>
             </tr>
+          </thead>
+          
 
-        <?php
-          }
-        ?>
+          <?php
+            $sq="select * from registro";
+            $qu=mysqli_query($con,$sq);
+            while($f=  mysqli_fetch_assoc($qu)){
+          ?>
+              <tr>
+                  <td>
+                    <?php echo $f['nomeCadastro']?>
+                  </td>
+                  
+                  <td>
+                    <?php echo $f['emailCadastro']?>
+                  </td>
+
+                  <td>
+                    <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
+                  </td>
+              </tr>
+
+          <?php
+            }
+          ?>
 
 
-      </table>
+        </table>
+      </form>
 
           <!-- JavaScript (Opcional) -->
           <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

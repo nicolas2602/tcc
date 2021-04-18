@@ -139,7 +139,7 @@
                 <div class="checkbox mb-3"><br>
                     <center>
                         <label>
-                            <input type="checkbox" value="Lembre-me" required> Lembre-me<br><hr>
+                            <input type="checkbox" value="Lembre-me"> Lembre-me<br><hr>
                             <input type="checkbox" value="Termos de política e privacidade" required>
                              Aceita os <a href="#" style="color: green;"><u>termos de política e privacidade</u></a> da empresa X-MAX?
                         </label>

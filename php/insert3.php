@@ -1,12 +1,11 @@
 <?php
 include 'conexao.php';
 if(isset($_POST['pag'])){
-    $end=$_POST['endereco'];
+    $name=$_POST['nome'];
     $pac=$_POST['pacote'];
-    $pag=$_POST['pagamento'];
     
 
-       $insert="insert into info(enderecoInfo,pacoteInfo,fpagoInfo) value ('$end','$pac','$pag')";
+       $insert="insert into pacote(donoPacote,nomePacote) value ('$name','$pac')";
        mysqli_query($con, $insert);
 
        if($insert){
