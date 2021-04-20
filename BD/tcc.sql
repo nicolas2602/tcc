@@ -23,7 +23,7 @@ tservico varchar(50) not null,
 endEmpresa varchar(50) not null,
 parceria varchar(50) not null
 );
---------------------------------------------------------------------------
+
 create table profile_reg(
 idProfile INT PRIMARY KEY AUTO_INCREMENT,
 nameProfile varchar(50)
@@ -36,13 +36,13 @@ select * from profile_reg;
 alter table registro
 ADD fk_idProfile int,
 ADD FOREIGN KEY(fk_idProfile) REFERENCES profile_reg(idProfile);
----------------------------------------------------------------------------
+
 CREATE TABLE pacote( 
 IdPacote int PRIMARY KEY AUTO_INCREMENT, 
 donoPacote varchar(50) not null, 
 nomePacote varchar(50) not null
 );
----------------------------------------------------------------------------
+
 CREATE TABLE pagamento(
 IdPagamento int PRIMARY KEY AUTO_INCREMENT, 
 enderecoPag varchar(50) not null, 
