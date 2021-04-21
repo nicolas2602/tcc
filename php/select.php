@@ -20,7 +20,15 @@ if(isset($_POST['log'])){
       header ('location:Principal.php');
    }
    else{
-       echo '<font style="color:red;">E-mail e senha incorretos!</font>';
+       echo 
+       '
+        <div class="alert alert-danger alert-dismissible fade show" display="none" role="alert">
+            <label>E-mail e senha incorretos!</label>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        ';
    }
   
 }

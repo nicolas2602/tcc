@@ -41,7 +41,7 @@
                     </div>  
                 </div>  
 
-             <label for="usuario">Usuario</label>
+             <label for="usuario">Usuário</label>
              <div class="input-group mb-3"> 
                  <input type="text" id="user" class="form-control" name="user" value="<?php echo $f['nomeCadastro']?>" required autofocus><br/>
                     <div class="input-group-append">
