@@ -24,7 +24,14 @@ if(isset($_POST['reg'])){
     
     }
     else{
-        echo 'Senhas não identificadas';
+        echo '
+            <div class="alert alert-danger alert-dismissible fade show" display="none" role="alert">
+                <label>Senhas não são idênticas!</label>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            ';
     }
 }
 
