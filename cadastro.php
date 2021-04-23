@@ -215,7 +215,7 @@
 
 
             </form>
-            <a href="index.php"><button style="margin-top: 5px;" class="btn btn-lg btn-primary btn-block" type="submit">Se já é cadastrado faça Login</button></a>
+            <a href="index.php" style="margin-top: 5px;" class="btn btn-lg btn-primary btn-block">Se já é cadastrado faça Login</a>
    
             
     </div>

@@ -41,20 +41,24 @@
                                     </small>
                                 <p>
                                     <i class="glyphicon glyphicon-envelope"></i><?php echo $f['emailCadastro'] ?>
-                                    <br />
+                                    <br/>
                                     <i class="glyphicon glyphicon-gift"></i><?php echo $f['dataN'] ?>
+                                    <br/>
+                                    <i class="glyphicon glyphicon-phone"></i><?php echo $f['tel1'] ?>
                                 </p>
 
-                                <div class="btn-group">
-                                    <a href="Principal.php" type="button" class="btn btn-primary">
-                                        Voltar
-                                   </a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
+                      
                 </div>
-            </div>
+            </div>  
+                        <div class="btn-group">
+                            <a href="Principal.php" type="button" class="btn btn-primary">
+                                Voltar
+                            </a>
+                        </div>
         </div>
         
     </body>

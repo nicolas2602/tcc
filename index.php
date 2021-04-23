@@ -35,7 +35,7 @@
 
             </form>
 
-            <a href="cadastro.php"><button style="margin-top: 3px;" class="btn btn-lg btn-success btn-block" type="submit">Criar nova conta</button></a>
+            <a href="cadastro.php" style="margin-top: 3px;" class="btn btn-lg btn-success btn-block">Criar nova conta</a>
 
 
 	</div>
