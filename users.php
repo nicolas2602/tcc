@@ -25,9 +25,9 @@
         <table class="table table-borderless text-center">
           <thead class="thead-dark">
             <tr>
+              <th scope="col">Foto</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
-              <th scope="col">Foto</th>
             </tr>
           </thead>
           
@@ -37,17 +37,17 @@
             $qu=mysqli_query($con,$sq);
             while($f=  mysqli_fetch_assoc($qu)){
           ?>
-              <tr>
+              <tr> 
+                 <td>
+                    <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
+                 </td>
+
                   <td>
                     <?php echo $f['nomeCadastro']?>
                   </td>
                   
                   <td>
                     <?php echo $f['emailCadastro']?>
-                  </td>
-
-                  <td>
-                    <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
                   </td>
               </tr>
 
