@@ -12,25 +12,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>X-MAX</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        function previewFile(input){
-            var file = $("input[type=file]").get(0).files[0];
-    
-            if(file){
-                var reader = new FileReader();
-    
-                reader.onload = function(){
-                    $("#previewImg").attr("src", reader.result);
+        <script>
+            function previewFile(input){
+                var file = $("input[type=file]").get(0).files[0];
+        
+                if(file){
+                    var reader = new FileReader();
+        
+                    reader.onload = function(){
+                        $("#previewImg").attr("src", reader.result);
+                    }
+        
+                    reader.readAsDataURL(file);
                 }
-    
-                reader.readAsDataURL(file);
             }
-        }
-    </script>
+        </script>
 </head>
 <body>
 
-<br/>
+   <br/>
 
 
  <div class="jumbotron container bg-light col-sm-6 rounded border border-dark" >
@@ -45,8 +45,17 @@
                  
             <?php include 'php/edit.php'; ?>
 
-            <img class="img-thumbnail mx-auto d-block border border-secondary rounded-0" id="previewImg" src="<?php echo $f['imagem']?>" width="211px" height="211px">
+                <style>
+                    
+                    #previewImg{
+                        width: 210px; 
+                        height: 210px;
+                    }
                 
+                </style>
+      
+              <img class="img-thumbnail mx-auto d-block border border-secondary rounded-0" id="previewImg" src="<?php echo $f['imagem']?>">
+ 
                 <center>
                     <div class="file btn btn-secondary btn-square" style="position: relative; overflow: hidden; border-radius: 0;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
@@ -183,7 +192,7 @@
     
     </div>
 
-</form>
+ </form>
 
      
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
