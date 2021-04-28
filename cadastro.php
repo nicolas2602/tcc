@@ -255,7 +255,7 @@
 
 
             </form>
-            <a href="index.php" style="margin-top: 5px;" class="btn btn-lg btn-primary btn-block">Se já é cadastrado faça Login</a>
+            <a href="login.php" style="margin-top: 5px;" class="btn btn-lg btn-primary btn-block">Se já é cadastrado faça Login</a>
    
             
     </div>

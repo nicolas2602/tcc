@@ -34,7 +34,7 @@ if(isset($_POST['reg'])){
                 '$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria')";
                 
         mysqli_query($con, $i);
-        header ('location:index.php');
+        header ('location:login.php');
 
     }
     else{

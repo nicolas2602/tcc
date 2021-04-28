@@ -3,6 +3,7 @@
 <center><div class="logo"><img src="Imagens/logo1.png" width="160px" alt="logo"></div></center><hr>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
+		
     	<ul class="navbar-nav mr-auto">
 			
 			<li class="nav-item active">
@@ -67,9 +68,12 @@
 					Sobre
 				</a>
 			</li>
+		
+		    </ul>
 
-			<li class="nav-item">
-					<div class="dropdown">
+
+			<div class="form-group mb-3">
+			    <div class="dropdown">
 						<button class="nav-link btn btn-light" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Perfil">
 						<img alt="perfil" class="rounded" src="<?php echo $f['imagem'];?>" width="30px">
 						<label><?php echo $f['nomeCadastro']?></label>
@@ -115,9 +119,7 @@
 							</a>
 						</div>
 					</div>
-				</li>
-		
-		    </ul>
+			    </div>
 
 			<form class="form-inline my-2 my-lg-0">
 				<div class="input-group mb-3">

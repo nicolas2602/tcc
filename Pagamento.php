@@ -32,7 +32,7 @@
         <div class="form-group">
           <div class="form-group">
             <div class="col">
-              <label class="text-left"><b style="color:black">Endereço:</b></label>
+              <label class="text-left"><b style="color:black">Confira endereço correto:</b></label>
               <input type="text" name="endereCo" class="form-control " placeholder="Insira o endereço" required autofocus>
             </div>
           </div>
@@ -42,14 +42,6 @@
             <div class="col">
               <label class="text-left"><b style="color:black">CEP:</b></label>
               <input type="text" name="CEP" class="form-control" placeholder="Insira o CEP" required autofocus>
-            </div>
-          </div>
-
-        <div class="form-group">
-          <div class="form-group">
-            <div class="col">
-              <label class="text-left"><b style="color:black">Email:</b></label>
-              <input type="text" name="email" class="form-control" placeholder="Insira o Email" required autofocus>
             </div>
           </div>
   
