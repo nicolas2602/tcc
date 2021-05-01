@@ -20,37 +20,35 @@
       <?php include 'include/nav.php';?>
      
       <!-- <center><div class="logo"><img src="Imagens/logo1.png" alt="logo"></div></center> -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
 
-      <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 img-fluid"  src="Imagens/1.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 img-fluid" src="Imagens/2.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 img-fluid" src="Imagens/3.png" alt="Third slide">
+            </div>
+          </div>
 
-        <ol class="carousel-indicators">
-          <li data-target="#carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel" data-slide-to="1"></li>
-          <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100 img-fluid"  src="Imagens/1.png" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100 img-fluid" src="Imagens/2.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100 img-fluid" src="Imagens/3.png" alt="Third slide">
-          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
-     </div>
  
         
 
@@ -137,15 +135,7 @@
 
     </form>
 
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p>&copy; 2021 - XMAX Corporation</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacidade</a></li>
-              <li class="list-inline-item"><a href="#">Termos</a></li>
-              <li class="list-inline-item"><a href="#">Suporte</a></li>
-            </ul>
-          </footer>
-
+         <?php include 'include/footer.php'; ?>
 
           <!-- JavaScript (Opcional) -->
           <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->

@@ -19,15 +19,14 @@
 <center><div class="logo"><img src="Imagens/logo1.png" style="width: 170px; height: 120px;"alt="logo"></div></center>
 
     <div class="modal-body">
-            Faça login para realizar o pagamento
+            Faça login para realizar o pagamento!
     </div>
 
   <br>
 
       <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">
-            OK
-          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+          <a href="http://localhost/tcc/login.php" class="btn btn-primary">Fazer Login</a>
       </div>
 
       </div>

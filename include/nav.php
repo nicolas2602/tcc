@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
 
-<center><div class="logo"><img src="Imagens/logo1.png" width="160px" alt="logo"></div></center><hr>
+ <center><div class="logo"><img src="Imagens/logo1.png" width="160px" alt="logo"></div></center><hr>
+
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
 		
