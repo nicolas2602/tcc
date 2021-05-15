@@ -237,20 +237,9 @@
                 
                 <div class="col">
                    <label for="inputEmail">Perfil (1-Admin; 2-User):</label>
-                        <select class="form-control " id="estado" name="perfil" required>
+                        <select class="form-control " id="estado" name="perfil">
                             <option value="">...</option>
-                                <?php 
-
-                                    $sql = mysqli_query($con, 
-                                    "select * from registro"
-                                    );
-                                    while($item = mysqli_fetch_assoc($sql))
-                                    {
-                                        $profile = $item['fk_idProfile'];
-                                        echo "<option value=$profile>$profile</option>";
-                                    }
-
-                                ?>
+                            <option value="<?php echo $f['fk_idProfile']; ?>">Admin</option>
                         </select>
                 </div>
             </div><br/>

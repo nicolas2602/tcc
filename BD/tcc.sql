@@ -38,9 +38,6 @@ alter table registro
 ADD fk_idProfile int,
 ADD FOREIGN KEY(fk_idProfile) REFERENCES profile_reg(idProfile);
 
-alter table registro
-ADD fk_IdLogging int(50) not null,
-ADD FOREIGN KEY(fk_IdLogging) REFERENCES logging(IdLogging);
 
 ------------------------------------------------------------------------
 

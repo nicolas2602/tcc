@@ -28,16 +28,16 @@
               <th scope="col">Foto</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
-              <th scope="col">Perfil</th>
+              <th scope="col">Último acesso</th>
             </tr>
           </thead>
           
 
           <?php
             $sq=" 
-            select * from registro
+            select * from logging
             as r 
-            inner join profile_reg as p on P.idProfile = r.fk_idProfile
+            inner join registro as p on P.IdRegistro = r.fk_registro
             ";
             $qu=mysqli_query($con,$sq);
             while($f=  mysqli_fetch_assoc($qu)){
@@ -55,7 +55,7 @@
                     <?php echo $f['emailCadastro']?>
                   </td>
                   <td>
-                    <?php echo $f['nameProfile']?>
+                    <?php echo $f['dateLogging']?>
                   </td>
             
               </tr>
