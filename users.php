@@ -2,6 +2,7 @@
     include 'php/conexao.php';
     include 'php/select2.php';
     include 'php/check.php';
+    include 'php/logger.php';
 ?>
 
 
@@ -28,12 +29,18 @@
               <th scope="col">Foto</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
+              <th scope="col">Perfil</th>
+              <th scope="col">Acesso</th>
             </tr>
           </thead>
           
 
           <?php
-            $sq="select * from registro";
+            $sq=" 
+            select * from registro
+            as r 
+            inner join profile_reg as p on P.idProfile = r.fk_idProfile
+            ";
             $qu=mysqli_query($con,$sq);
             while($f=  mysqli_fetch_assoc($qu)){
           ?>
@@ -49,6 +56,10 @@
                   <td>
                     <?php echo $f['emailCadastro']?>
                   </td>
+                  <td>
+                    <?php echo $f['nameProfile']?>
+                  </td>
+            
               </tr>
 
           <?php

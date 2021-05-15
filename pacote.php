@@ -1,6 +1,9 @@
 <?php include 'php/conexao.php';?>
 <?php include 'php/insert3.php';?>
-<?php include 'php/select2.php';?>
+<?php 
+include 'php/select2.php';
+include 'php/logger.php';
+?>
 
 
 <!DOCTYPE html>

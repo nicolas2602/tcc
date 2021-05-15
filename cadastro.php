@@ -1,6 +1,8 @@
-
-<?php include 'php/conexao.php';?>
-<?php include 'php/insert.php';?>
+<?php 
+      include 'php/conexao.php';
+      include 'php/insert.php';
+      include 'php/select2.php';
+?>
 
 
 
@@ -227,15 +229,35 @@
                 </div>
             </div>
             <br>
+            <div class="row">
+                <div class="col">
+                    <label for="inputEmail">Endereço Empresa: </label>
+                    <input type="text" id="endem" class="form-control" name="endem" placeholder="Endereço Empresa" required>
+                </div>
                 
-                <label for="inputEmail">Endereço Empresa: </label>
-                   <input type="text" id="endem" class="form-control" name="endem" placeholder="Endereço Empresa" required><br/>
+                <div class="col">
+                   <label for="inputEmail">Perfil (1-Admin; 2-User):</label>
+                        <select class="form-control " id="estado" name="perfil" required>
+                            <option value="">...</option>
+                                <?php 
 
-                
+                                    $sql = mysqli_query($con, 
+                                    "select * from registro"
+                                    );
+                                    while($item = mysqli_fetch_assoc($sql))
+                                    {
+                                        $profile = $item['fk_idProfile'];
+                                        echo "<option value=$profile>$profile</option>";
+                                    }
+
+                                ?>
+                        </select>
+                </div>
+            </div><br/>
+
                 <label for="inputEmail">Gostaria de ter uma parceria com a X-MAX? </label>
                     <input type="radio"name="parceria" id="parceria" value="Sim" required>Sim
                     <input type="radio" name="parceria" id="parceria" value="Não" required>Não<br>
-                
                
                
 

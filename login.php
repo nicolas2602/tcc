@@ -1,4 +1,7 @@
-<?php include 'php/conexao.php';?>
+<?php 
+include 'php/conexao.php';
+include 'php/select.php';
+?>
 
 
 <!DOCTYPE html>
