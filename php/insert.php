@@ -20,7 +20,7 @@ if(isset($_POST['reg'])){
    $tserviço=$_POST['tserviço'];
    $endem=$_POST['endem'];
    $parceria=$_POST['parceria'];
-   //$perfil=$_POST['perfil'];
+   $perfil=$_POST['perfil'];
  
    if($senha == $rsenha){
 
@@ -30,9 +30,9 @@ if(isset($_POST['reg'])){
     }
 
     $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,csenhaCadastro,imagem,
-                            empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria) 
+                            empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria,fk_idProfile) 
         values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senha','$rsenha','$img',
-                '$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria')";
+                '$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria','$perfil')";
                 
         mysqli_query($con, $i);
         header ('location:login.php');

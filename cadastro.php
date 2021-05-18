@@ -239,7 +239,7 @@
                    <label for="inputEmail">Perfil (1-Admin; 2-User):</label>
                         <select class="form-control " id="estado" name="perfil">
                             <option value="">...</option>
-                            <option value="<?php echo $f['fk_idProfile']; ?>">Admin</option>
+                            <option value="fk_idProfile=<?php echo $f['fk_idProfile']; ?>">Admin</option>
                         </select>
                 </div>
             </div><br/>
