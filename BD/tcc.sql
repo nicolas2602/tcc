@@ -15,7 +15,11 @@ cpf varchar(50) not null,
 emailCadastro varchar(50) not null, 
 senhaCadastro varchar(50) not null,
 csenhaCadastro varchar(50) not null,
-imagem varchar(50) not null,
+imagem varchar(50) not null
+);
+
+CREATE TABLE empresa(
+IdEmpresa int primary key AUTO_INCREMENT,
 empresa varchar(50) not null,
 cnpj varchar(50) not null,
 nomeEmpresa varchar(50) not null,
@@ -24,6 +28,11 @@ endEmpresa varchar(50) not null,
 parceria varchar(50) not null
 );
 
+alter table registro
+ADD fk_IdEmpresa int,
+ADD FOREIGN KEY (fk_IdEmpresa) references empresa(IdEmpresa);
+
+
 -- Perfil Administrador ou Usuário --
 create table profile_reg(
 idProfile INT PRIMARY KEY AUTO_INCREMENT,
@@ -31,8 +40,6 @@ nameProfile varchar(50)
 );
 
 insert into profile_reg(nameProfile) values ('Admin'), ('User');
-
-select * from profile_reg;
 
 alter table registro
 ADD fk_idProfile int,

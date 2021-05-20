@@ -21,7 +21,6 @@ include 'php/select.php';
                 <h1 class="h3 mb-3 font-weight-normal"><center><img id="Pizzagame"src="imagens/logo1.png" width="260px" /></center></h1>
                 <h1 style="color:rgb(56, 52, 52)"><b><center>Login</center></b></h1>
                 
-                <?php include 'php/select.php';?>
 
                 <labe>E-mail:</labe>
                 <input type="email" name='email' id="inputUser" class="form-control" placeholder="E-mail" required autofocus><br>

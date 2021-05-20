@@ -18,7 +18,7 @@ if(isset($_POST['reg'])){
         $img=$_POST['img1'];
     }
 
-        $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$c',csenhaCadastro='$g',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
+        $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$c',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
         mysqli_query($con, $i);
         header('location:Principal.php');
     

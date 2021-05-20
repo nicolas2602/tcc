@@ -138,7 +138,7 @@
                <div class="col">    
                     <label for="inputPassword">Repetir Senha</label>
                         <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="csenha" id="rsenha" value="<?php echo $f['csenhaCadastro']?>" required>
+                        <input type="password" class="form-control" name="csenha" id="rsenha" value="<?php echo $f['senhaCadastro']?>" required>
                             <div class="input-group-append">                  
                                 <button type="button" class="input-group-text btn" onclick="mostrarRSenha()">
                                     

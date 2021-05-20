@@ -1,6 +1,7 @@
 <?php 
       include 'php/conexao.php';
       include 'php/insert.php';
+      include 'php/insert2.php';
       include 'php/select2.php';
 ?>
 
@@ -239,7 +240,8 @@
                    <label for="inputEmail">Perfil (1-Admin; 2-User):</label>
                         <select class="form-control " id="estado" name="perfil">
                             <option value="">...</option>
-                            <option value="fk_idProfile=<?php echo $f['fk_idProfile']; ?>">Admin</option>
+                            <!-- UPDATE `registro` SET `fk_idProfile` = '1' WHERE `registro`.`IdRegistro` = 1; -->
+                            <option value="<?php echo $f['fk_idProfile']; ?>"><?php echo $f['fk_idProfile'];?></option>
                         </select>
                 </div>
             </div><br/>

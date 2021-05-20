@@ -3,12 +3,11 @@ include 'conexao.php';
 
 if(isset($_POST['log'])){
     $email=$_POST['email'];
-    $senha=$_POST['senha'];
+    $senha=md5($_POST['senha']);
     $s= 
     "
     select * from registro
-    as r inner join profile_reg 
-    as p on P.idProfile = r.fk_idProfile
+    as r inner join profile_reg as p on P.idProfile = r.fk_idProfile
     where emailCadastro='$email' and senhaCadastro= '$senha'
     ";   
     $qu= mysqli_query($con, $s);
@@ -21,14 +20,7 @@ if(isset($_POST['log'])){
    }
    else{
        echo 
-       '
-        <div class="alert alert-danger alert-dismissible fade show" display="none" role="alert">
-            <label>E-mail e senha incorretos!</label>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        ';
+       "<script>alert('Email e Senha Incorretos')</script>";
    }
   
 }
