@@ -1,5 +1,6 @@
 <?php
 include 'conexao.php';
+include 'logger.php';
 if(isset($_POST['reg'])){
    $nome=$_POST['nome'];
    $dataN=$_POST['data'];
@@ -12,23 +13,24 @@ if(isset($_POST['reg'])){
    $tel2=$_POST['tel2'];
    $cpf=$_POST['cpf'];
    $email=$_POST['email'];
-   $senha=md5($_POST['senha']);
-   $rsenha=md5($_POST['csenha']);
-   //$perfil=$_POST['perfil'];
+   $senha=($_POST['senha']);
+   $rsenha=($_POST['csenha']);
+   $perfil=$_POST['perfil'];
  
    if($senha == $rsenha){
-
+         
+    $senhacript = base64_encode($senha);
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
         $img="perfil/".$_FILES['f1']['name'];
     }
 
-    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,imagem
-                              ) 
-        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senha','$img')";
+    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,fk_idProfile) 
+        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$perfil')";
                 
         mysqli_query($con, $i);
-        header ('location:login.php');
+        header ('location:login.php');    
+        logMsg( "Novo usuário" );
 
     }
     else{

@@ -25,26 +25,32 @@
         <table class="table table-borderless text-center">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">Foto</th>
+             <th scope="col">Foto</th>
+              <th scope="col">Código</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
               <th scope="col">Perfil</th>
+              <th scope="col">Status</th>
+              <th scope="col">Ativar ou Desativar</th>
             </tr>
           </thead>
           
 
           <?php
             $sq=" 
-            select * from registro
-            as r 
-            inner join profile_reg as p on P.idProfile = r.fk_idProfile
+            select * from registro where fk_idProfile = 2
             ";
             $qu=mysqli_query($con,$sq);
             while($f=  mysqli_fetch_assoc($qu)){
           ?>
               <tr> 
+                 
                  <td>
-                    <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
+                    <img src="<?php echo $f['imagem'];?>" width="60px" height="60px">
+                 </td>
+                 
+                 <td>
+                    <?php echo $f['IdRegistro']?>
                  </td>
 
                   <td>
@@ -54,8 +60,28 @@
                   <td>
                     <?php echo $f['emailCadastro']?>
                   </td>
+
                   <td>
-                    <?php echo $f['nameProfile']?>
+                    <?php 
+                      if($f['fk_idProfile'] == 2){
+                        echo "Usuário";
+                      }
+                    ?>
+                  </td>
+                  
+                  <td>
+                    <?php   
+                    if($f['status_user'] == 0){
+                         echo "<div class='bg-success text-white'>ON</div>";
+                    }
+                    if($f['status_user'] == 1){
+                      echo "<div class='bg-danger text-white'>OFF</div>";
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <a class="btn btn-success" href="ativar.php?act=<?php echo $f['IdRegistro']?>" onclick="return confirm('Ativar a conta do usuário?')">Ativar</a>
+                    <a class="btn btn-danger" href="desativar.php?dct=<?php echo $f['IdRegistro']?>" onclick="return confirm('Desativar a conta do usuário?')">Desativar</a>
                   </td>
             
               </tr>

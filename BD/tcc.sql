@@ -14,8 +14,8 @@ tel2 varchar(50) not null,
 cpf varchar(50) not null,
 emailCadastro varchar(50) not null, 
 senhaCadastro varchar(50) not null,
-csenhaCadastro varchar(50) not null,
 imagem varchar(50) not null
+status_user boolean not null
 );
 
 CREATE TABLE empresa(
@@ -65,7 +65,7 @@ formaPag varchar(50) not null
 --- Log de acesso ---
 Create table logging(
 IdLogging int primary key AUTO_INCREMENT,
-dateLogging datetime not null,
+dateLogging datetime default now(),
 level varchar(100),
 msg varchar(100) not null,
 fk_registro int not null,

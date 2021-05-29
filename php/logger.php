@@ -52,6 +52,5 @@ function logMsg( $msg, $level = 'info', $file = 'main.log' )
 
 }
 
-logMsg( "O usuário entrou..." );
 
 ?>

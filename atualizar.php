@@ -103,7 +103,7 @@
                 <div class="col">
                     <label for="inputPassword">Senha</label>
                     <div class="input-group mb-3">
-                        <input type="password" id="senha" class="form-control" name="senha" value="<?php echo $f['senhaCadastro']?>" required><br/>
+                        <input type="password" id="senha" class="form-control" name="senha" value="<?php echo base64_decode($f['senhaCadastro'])?>" required><br/>
                                 <div class="input-group-append">
                                     <button id="botao" type="button" class="input-group-text btn" onclick="mostrarSenha()" type="button">
                                         <svg id="mostrar" display="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -138,7 +138,7 @@
                <div class="col">    
                     <label for="inputPassword">Repetir Senha</label>
                         <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="csenha" id="rsenha" value="<?php echo $f['senhaCadastro']?>" required>
+                        <input type="password" class="form-control" name="csenha" id="rsenha" value="<?php echo base64_decode($f['senhaCadastro'])?>" required>
                             <div class="input-group-append">                  
                                 <button type="button" class="input-group-text btn" onclick="mostrarRSenha()">
                                     

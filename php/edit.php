@@ -9,6 +9,8 @@ if(isset($_POST['reg'])){
     $g=$_POST['csenha'];
 
     if($c == $g){
+
+        $senhacript = base64_encode($c);
         
     if($_FILES['f1']['name']){
         move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
@@ -18,7 +20,7 @@ if(isset($_POST['reg'])){
         $img=$_POST['img1'];
     }
 
-        $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$c',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
+        $i="update registro set emailCadastro='$u',nomeCadastro='$t',senhaCadastro='$senhacript',imagem='$img' where IdRegistro='$_SESSION[IdRegistro]'";
         mysqli_query($con, $i);
         header('location:Principal.php');
     

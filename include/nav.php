@@ -73,7 +73,7 @@
 					<div class="dropdown">
 							<button class="nav-link btn btn-light" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Perfil">
 							<img alt="perfil" class="rounded" src="<?php echo $f['imagem'];?>" width="30px">
-							<label><?php echo $f['nomeCadastro']?></label>
+							<label><?php echo $f['nomeCadastro']?></label><br>
 							</button>
 
 							<div class="dropdown-menu">

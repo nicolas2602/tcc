@@ -2,7 +2,6 @@
     include 'php/conexao.php';
     include 'php/insert3.php';
     include 'php/select2.php';
-    include 'php/logger.php';
 ?>
 
 <!DOCTYPE html>

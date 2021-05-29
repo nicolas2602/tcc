@@ -230,21 +230,9 @@
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col">
                     <label for="inputEmail">Endereço Empresa: </label>
                     <input type="text" id="endem" class="form-control" name="endem" placeholder="Endereço Empresa" required>
-                </div>
-                
-                <div class="col">
-                   <label for="inputEmail">Perfil (1-Admin; 2-User):</label>
-                        <select class="form-control " id="estado" name="perfil">
-                            <option value="">...</option>
-                            <!-- UPDATE `registro` SET `fk_idProfile` = '1' WHERE `registro`.`IdRegistro` = 1; -->
-                            <option value="<?php echo $f['fk_idProfile']; ?>"><?php echo $f['fk_idProfile'];?></option>
-                        </select>
-                </div>
-            </div><br/>
+                <br/>
 
                 <label for="inputEmail">Gostaria de ter uma parceria com a X-MAX? </label>
                     <input type="radio"name="parceria" id="parceria" value="Sim" required>Sim

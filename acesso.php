@@ -55,7 +55,11 @@
                     <?php echo $f['emailCadastro']?>
                   </td>
                   <td>
-                    <?php echo $f['dateLogging']?>
+                    <?php 
+                     $data = $f['dateLogging'];
+                     echo date('d/m/Y H:i:s', strtotime($data));
+                    
+                    ?>
                   </td>
             
               </tr>

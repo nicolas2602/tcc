@@ -1,7 +1,6 @@
 <?php 
      include 'php/conexao.php';
      include 'php/select2.php';
-     include 'php/logger.php';
 ?>
 
 <!DOCTYPE html>
