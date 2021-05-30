@@ -1,6 +1,23 @@
 <?php         
     
     include 'conexao.php';
+
+    if(isset($_POST['add'])){
+        
+        $produto=$_POST['prod'];
+        $preco=$_POST['price'];
+
+        if($_FILES['f1']['name']){
+            move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
+            $img="perfil/".$_FILES['f1']['name'];
+        }
+    
+    
+        $insertProd="insert into produto(NOME_PRODUTO,preco,foto_produto) values ('$produto','$preco','$img')";
+    
+        mysqli_query($con, $insertProd);
+        header('location:carrinho.php');
+    }
     
     if(isset($_POST['addShoppingCart'])){
     
@@ -31,11 +48,6 @@
     }
 
     mysqli_query($con, $sqlAddOrUpdate);
-
-
-
-
-    // header('location:home.php');
 
 }
 

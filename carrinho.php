@@ -2,7 +2,7 @@
     include 'php/conexao.php';
     include 'php/select2.php';
     include 'php/insert_car.php';
-    include 'php/insert_car2.php';
+    include 'php/edit_car.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,16 +13,37 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/Tcc.css">
         <title>X-MAX</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            function previewFile(input){
+                var file = $("input[type=file]").get(0).files[0];
+        
+                if(file){
+                    var reader = new FileReader();
+        
+                    reader.onload = function(){
+                        $("#previewImg").attr("src", reader.result);
+                    }
+        
+                    reader.readAsDataURL(file);
+                }
+            }
+        </script>
     </head>
     <body>
            <?php include 'include/nav.php'; ?>
-
-           <?php include 'include/add_car.php'; ?>
-
            <form method="post" enctype="multipart/form-data">
+
+               <?php include 'include/add_car.php'; ?>
+            </form>
+
+            <form method="post" enctype="multipart/form-data">
                 <table class="table table-borderless text-center">
                  <thead class="thead-dark">
                 <tr>
+                    <th scope="col">
+                        Foto
+                    </th>
                     <th scope="col">
                         Código
                     </th>
@@ -34,6 +55,9 @@
                     </th>
                     <th scope="col">
                         Quantidade
+                    </th>
+                    <th scope="col">
+                        
                     </th>
 
                 </tr>
@@ -51,6 +75,9 @@
                 ?>
                 <tr>
                     <td>
+                       <img src="<?php echo $produto['foto_produto']?>" width="80px" height="80px">
+                    </td>
+                    <td>
                         <?php echo $produto['ID_PRODUTO']?>
                     </td>
                     <td>
@@ -61,12 +88,17 @@
                     </td>
                     <td>
                         <form method="POST" enctype="multipart/form-data">
-                            <input type="number" name="quantity" value="<?=$produto['QTD_PRODUTO']?>" min="1" placeholder="Quantity" required>
-                            <input type="hidden" name="idProduto" value="<?=$produto['ID_PRODUTO']?>">
-                            <input type="hidden" name="nomeProduto" value="<?=$produto['NOME_PRODUTO']?>">
-                            <input type="submit" name="addShoppingCart" value="Adicionar">
+                               <input type="number"  name="quantity" value="<?=$produto['QTD_PRODUTO']?>" min="1" placeholder="Quantidade" required>
+                                <input type="hidden" name="idProduto" value="<?=$produto['ID_PRODUTO']?>">
+                                <input type="hidden" name="nomeProduto" value="<?=$produto['NOME_PRODUTO']?>">
+                                <input type="submit" name="addShoppingCart" value="Adicionar">
+
                         </form>
                     </td>
+                    <td>
+                        <!-- //<?php include 'include/up_car.php';?> -->
+                    </td>
+                    
                 </tr>
                 <?php
                 }
@@ -112,13 +144,13 @@
                         <?php echo $compra_produto['NOME_PRODUTO']?>
                     </td>
                     <td>
-                        <?php echo $compra_produto['preco']?>
+                        R$ <?php echo $compra_produto['preco']?>
                     </td>
                     <td>
                         <?php echo $compra_produto['QTD_PRODUTO']?>
                     </td>
                     <td>
-                        <?php echo $compra_produto['QTD_PRODUTO']*$compra_produto['preco']?>
+                        R$ <?php echo $compra_produto['QTD_PRODUTO']*$compra_produto['preco']?>.00
                     </td>
 
                 </tr>

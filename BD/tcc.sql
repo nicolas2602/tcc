@@ -78,7 +78,8 @@ insert into logging (dateLogging, level, msg, fk_registro) VALUES (now(), 'INFO'
 CREATE TABLE PRODUTO(
 	ID_PRODUTO INT PRIMARY KEY AUTO_INCREMENT,
 	NOME_PRODUTO VARCHAR(30) NOT NULL,
-    preco decimal(10,2) not null
+    preco decimal(10,2) not null,
+	foto_produto varchar(50) not null
 );
 
 
