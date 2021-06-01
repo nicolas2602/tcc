@@ -2,7 +2,7 @@
     include 'php/conexao.php';
     include 'php/select2.php';
     include 'php/insert_car.php';
-    include 'php/edit_car.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,6 @@
     <body>
            <?php include 'include/nav.php'; ?>
            <form method="post" enctype="multipart/form-data">
-
                <?php include 'include/add_car.php'; ?>
             </form>
 
@@ -86,17 +85,32 @@
                     <td>
                         R$ <?php echo $produto['preco']?>
                     </td>
-                    <td>
+                   <td>
                         <form method="POST" enctype="multipart/form-data">
-                               <input type="number"  name="quantity" value="<?=$produto['QTD_PRODUTO']?>" min="1" placeholder="Quantidade" required>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control col-10"  name="quantity" value="<?=$produto['QTD_PRODUTO']?>" min="1" placeholder="Quantidade" required>
                                 <input type="hidden" name="idProduto" value="<?=$produto['ID_PRODUTO']?>">
                                 <input type="hidden" name="nomeProduto" value="<?=$produto['NOME_PRODUTO']?>">
-                                <input type="submit" name="addShoppingCart" value="Adicionar">
+                                 <div class="input-group-append">
+                                 <input type="submit" class="btn btn-warning col-md-12" name="addShoppingCart" value="Adicionar">
+                                </div>
+                            </div>
 
                         </form>
                     </td>
                     <td>
-                        <!-- //<?php include 'include/up_car.php';?> -->
+                         <a href="up_car.php?ID_PRODUTO=<?php echo $produto['ID_PRODUTO']?>&NOME_PRODUTO=<?php echo $produto['NOME_PRODUTO']?>
+                                &preco=<?php echo $produto['preco']?>&foto_produto=<?php echo $produto['foto_produto']?>" 
+                                class="btn btn-primary">
+                                Atualizar
+                        </a> 
+
+                        <a href="excluir_car.php?ID_PRODUTO=<?php echo $produto['ID_PRODUTO']?>&NOME_PRODUTO=<?php echo $produto['NOME_PRODUTO']?>
+                                &preco=<?php echo $produto['preco']?>&foto_produto=<?php echo $produto['foto_produto']?>" 
+                                class="btn btn-danger">
+                                Deletar
+                        </a> 
+
                     </td>
                     
                 </tr>
@@ -127,6 +141,9 @@
                         <th>
                             Total Preço
                         </th>
+                        <th>
+                            
+                        </th>
                     </tr>
                 </thead>
 
@@ -151,6 +168,14 @@
                     </td>
                     <td>
                         R$ <?php echo $compra_produto['QTD_PRODUTO']*$compra_produto['preco']?>.00
+                    </td>
+                    <td>
+                       <a href="delete_car2.php?del=<?php echo $compra_produto['ID']?>&<?php echo $compra_produto['FK_PRODUTO']?>&
+                         <?php echo $compra_produto['FK_COMPRA']?>&<?php echo $compra_produto['QTD_PRODUTO']?>"class="btn btn-danger">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        </a> 
                     </td>
 
                 </tr>

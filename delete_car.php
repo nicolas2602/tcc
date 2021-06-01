@@ -1,8 +1,8 @@
 <?php
 
-include 'conexao.php';
+include 'php/conexao.php';
 
-if(isset($_POST['up'])){
+if(isset($_POST['del'])){
     $id=$_POST['id'];
     $produto=$_POST['prod'];
     $preco=$_POST['price'];
@@ -15,7 +15,7 @@ if(isset($_POST['up'])){
         $img=$_POST['img1'];
     }
 
-        $up="update produto set NOME_PRODUTO='$produto', preco='$preco', foto_produto='$img' where ID_PRODUTO={$id}";
+        $up="delete from produto where ID_PRODUTO={$id}";
         mysqli_query($con, $up);
         header('location:carrinho.php');
     

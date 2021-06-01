@@ -1,6 +1,8 @@
 <?php
 include 'conexao.php';
 include 'logger.php';
+include 'select2.php';
+
 if(isset($_POST['reg'])){
    $nome=$_POST['nome'];
    $dataN=$_POST['data'];
@@ -15,7 +17,12 @@ if(isset($_POST['reg'])){
    $email=$_POST['email'];
    $senha=($_POST['senha']);
    $rsenha=($_POST['csenha']);
-   $perfil=$_POST['perfil'];
+   $empresa=$_POST['emp'];
+   $cnpj=$_POST['cnpj'];
+   $nempresa=$_POST['nempresa'];
+   $tserviço=$_POST['tserviço'];
+   $endem=$_POST['endem'];
+   $parceria=$_POST['parceria'];
  
    if($senha == $rsenha){
          
@@ -25,8 +32,10 @@ if(isset($_POST['reg'])){
         $img="perfil/".$_FILES['f1']['name'];
     }
 
-    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,fk_idProfile) 
-        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$perfil')";
+    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,
+    empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria) 
+        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$empresa',
+                '$cnpj','$nempresa','$tserviço','$endem','$parceria')";
                 
         mysqli_query($con, $i);
         header ('location:login.php');    

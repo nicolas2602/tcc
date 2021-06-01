@@ -14,23 +14,32 @@ tel2 varchar(50) not null,
 cpf varchar(50) not null,
 emailCadastro varchar(50) not null, 
 senhaCadastro varchar(50) not null,
-imagem varchar(50) not null
-status_user boolean not null
-);
-
-CREATE TABLE empresa(
-IdEmpresa int primary key AUTO_INCREMENT,
+imagem varchar(50) not null,
 empresa varchar(50) not null,
 cnpj varchar(50) not null,
 nomeEmpresa varchar(50) not null,
 tservico varchar(50) not null,
 endEmpresa varchar(50) not null,
-parceria varchar(50) not null
+parceria varchar(50) not null,
+status_user boolean not null
 );
 
-alter table registro
-ADD fk_IdEmpresa int,
-ADD FOREIGN KEY (fk_IdEmpresa) references empresa(IdEmpresa);
+-- CREATE TABLE empresa(
+-- IdEmpresa int AUTO_INCREMENT,
+-- fk_IdRegistro int,
+-- empresa varchar(50) not null,
+-- cnpj varchar(50) not null,
+-- nomeEmpresa varchar(50) not null,
+-- tservico varchar(50) not null,
+-- endEmpresa varchar(50) not null,
+-- parceria varchar(50) not null,
+-- primary key (IdEmpresa, fk_IdRegistro),
+-- FOREIGN KEY (fk_IdRegistro) references registro(IdRegistro);
+-- );
+
+-- alter table registro
+-- ADD fk_IdEmpresa int,
+-- ADD FOREIGN KEY (fk_IdEmpresa) references empresa(IdEmpresa);
 
 
 -- Perfil Administrador ou Usuário --

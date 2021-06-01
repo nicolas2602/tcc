@@ -19,6 +19,7 @@
         header('location:carrinho.php');
     }
     
+    
     if(isset($_POST['addShoppingCart'])){
     
     $product_id = (int)$_POST['idProduto'];
