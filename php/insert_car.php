@@ -2,6 +2,16 @@
     
     include 'conexao.php';
 
+    $sq=
+    "
+    select * from produto as p
+    left join compra_produto as cp on cp.FK_PRODUTO = P.ID_PRODUTO
+    ";
+
+    $qu=mysqli_query($con,$sq);
+    $produto=  mysqli_fetch_assoc($qu);
+
+
     if(isset($_POST['add'])){
         
         $produto=$_POST['prod'];

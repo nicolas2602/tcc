@@ -1,5 +1,6 @@
 <?php 
     include 'php/conexao.php';
+    include 'php/select.php';
     include 'php/select2.php';
     include 'php/insert_car.php';
     
@@ -32,9 +33,12 @@
     </head>
     <body>
            <?php include 'include/nav.php'; ?>
-           <form method="post" enctype="multipart/form-data">
-               <?php include 'include/add_car.php'; ?>
+
+
+            <form method='post' enctype='multipart/form-data'>
+                <?php include 'include/add_car.php'; ?>
             </form>
+ 
 
             <form method="post" enctype="multipart/form-data">
                 <table class="table table-borderless text-center">
@@ -55,9 +59,12 @@
                     <th scope="col">
                         Quantidade
                     </th>
-                    <th scope="col">
-                        
-                    </th>
+                    <?php
+                    if($_SESSION['profile']=='Admin'){
+                    echo"
+                    <th scope='col'></th>";
+                    }
+                    ?>
 
                 </tr>
                 </thead>
@@ -98,20 +105,26 @@
 
                         </form>
                     </td>
+                    <?php
+                    if($_SESSION['profile']=='Admin'){
+                    echo("
                     <td>
-                         <a href="up_car.php?ID_PRODUTO=<?php echo $produto['ID_PRODUTO']?>&NOME_PRODUTO=<?php echo $produto['NOME_PRODUTO']?>
-                                &preco=<?php echo $produto['preco']?>&foto_produto=<?php echo $produto['foto_produto']?>" 
-                                class="btn btn-primary">
+                         <a href='up_car.php?ID_PRODUTO=$produto[ID_PRODUTO]&NOME_PRODUTO=$produto[NOME_PRODUTO]
+                                &preco=$produto[preco]&foto_produto=$produto[foto_produto]'
+                                class='btn btn-primary'>
                                 Atualizar
                         </a> 
 
-                        <a href="excluir_car.php?ID_PRODUTO=<?php echo $produto['ID_PRODUTO']?>&NOME_PRODUTO=<?php echo $produto['NOME_PRODUTO']?>
-                                &preco=<?php echo $produto['preco']?>&foto_produto=<?php echo $produto['foto_produto']?>" 
-                                class="btn btn-danger">
+                        <a href='excluir_car.php?ID_PRODUTO=$produto[ID_PRODUTO]&NOME_PRODUTO=$produto[NOME_PRODUTO]
+                                &preco=$produto[preco]&foto_produto=$produto[foto_produto]' 
+                                class='btn btn-danger'>
                                 Deletar
                         </a> 
 
                     </td>
+                    ");
+                    }
+                    ?>
                     
                 </tr>
                 <?php
