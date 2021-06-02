@@ -9,8 +9,16 @@
     ";
 
     $qu=mysqli_query($con,$sq);
-    $produto=  mysqli_fetch_assoc($qu);
+    $produto=mysqli_fetch_assoc($qu);
 
+    $sq=
+    "
+    SELECT * FROM compra_produto as cp
+    inner join compra as c on c.ID_COMPRA = cp.FK_COMPRA
+    inner join produto as p on p.ID_PRODUTO = cp.FK_PRODUTO
+    ";
+    $qu=mysqli_query($con,$sq);
+    $compra_produto=mysqli_fetch_assoc($qu);
 
     if(isset($_POST['add'])){
         
