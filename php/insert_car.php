@@ -44,7 +44,7 @@
     $quantity = (int)$_POST['quantity'];
     $nomeProduto = $_POST['nomeProduto'];
 
-    $idCompra = 1;
+    $idCompra = 52;
 
     $sqlGetCompra="select * from compra_produto where FK_COMPRA={$idCompra} AND FK_PRODUTO ={$product_id}";
     $queryGetCompra= mysqli_query($con, $sqlGetCompra);

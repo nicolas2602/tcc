@@ -41,7 +41,7 @@
             </form>
  
 
-            <form method="post" enctype="multipart/form-data">
+            
                 <table class="table table-borderless text-center">
                  <thead class="thead-dark">
                 <tr>
@@ -94,18 +94,16 @@
                         R$ <?php echo $produto['preco']?>
                     </td>
                    <td>
-                        <form method="POST" enctype="multipart/form-data">
-                            <div class="input-group mb-3">
+                   <form method="POST" enctype="multipart/form-data">
+                        <div class="input-group mb-3">                  
                                 <input type="number" class="form-control col-10"  name="quantity" value="<?=$produto['QTD_PRODUTO']?>" min="1" placeholder="Quantidade" required>
                                 <input type="hidden" name="idProduto" value="<?=$produto['ID_PRODUTO']?>">
                                 <input type="hidden" name="nomeProduto" value="<?=$produto['NOME_PRODUTO']?>">
-                                <input type="hidden" name="idcompra" value="<?=$compra_produto['ID_COMPRA']?> ">  
-                                 <div class="input-group-append">
-                                 <input type="submit" class="btn btn-warning col-md-12" name="addShoppingCart" value="Adicionar">
+                                <div class="input-group-append">
+                                <input type="submit" class="btn btn-warning col-md-12" name="addShoppingCart" value="Adicionar">
                                 </div>
-                            </div>
-
-                        </form>
+                        </div>         
+                    </form>             
                     </td>
                     <?php
                     if($_SESSION['profile']=='Admin'){
@@ -132,12 +130,14 @@
                 <?php
                 }
                 ?>
+
                 </table>
             
 
                 <br>
                 <br>
                 <br>
+            
 
 
 
@@ -203,7 +203,7 @@
                     }          
                 }
                 ?>
-                <form method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
                  <tr>
                     <th scope="row" class="table-secondary"></th>
                     <td colspan="2" align="right" class="table-secondary"><strong>TOTAL:</strong></td>
