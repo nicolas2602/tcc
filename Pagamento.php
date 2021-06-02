@@ -20,7 +20,6 @@
 
     <form method="post" enctype="multipart/form-data">
       
-      <?php include 'include/carrinho.php'; ?>
 
     
       <div class="jumbotron container bg-light col-sm-4 h-80 rounded border border-dark ">
