@@ -17,12 +17,7 @@ if(isset($_POST['reg'])){
    $email=$_POST['email'];
    $senha=($_POST['senha']);
    $rsenha=($_POST['csenha']);
-   $empresa=$_POST['emp'];
-   $cnpj=$_POST['cnpj'];
-   $nempresa=$_POST['nempresa'];
-   $tserviço=$_POST['tserviço'];
-   $endem=$_POST['endem'];
-   $parceria=$_POST['parceria'];
+   $perfil=($_POST['perfil']);
  
    if($senha == $rsenha){
          
@@ -32,10 +27,8 @@ if(isset($_POST['reg'])){
         $img="perfil/".$_FILES['f1']['name'];
     }
 
-    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,
-    empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria) 
-        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$empresa',
-                '$cnpj','$nempresa','$tserviço','$endem','$parceria')";
+    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,fk_idProfile) 
+        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$perfil')";
                 
         mysqli_query($con, $i);
         header ('location:login.php');    

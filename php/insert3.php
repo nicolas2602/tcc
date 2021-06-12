@@ -1,16 +1,20 @@
 <?php
 include 'conexao.php';
-if(isset($_POST['pag'])){
-    $name=$_POST['nome'];
-    $pac=$_POST['pacote'];
-    
+include 'select2.php';
 
-       $insert="insert into pacote(donoPacote,nomePacote) value ('$name','$pac')";
+if(isset($_POST['pag'])){  
+    $end=$_POST['endereCo'];
+    $cep=$_POST['CEP'];
+    $pag=$_POST['pagamento'];
+    $pac=$_POST['pacote'];
+    $cliente=$_SESSION['IdRegistro'];
+
+       $insert="insert into paga_pacote(enderecoPag,cepPag,formaPag,fk_IdPacote,fk_IdRegistro) 
+                               value ('$end','$cep','$pag','$pac','$cliente')";
        mysqli_query($con, $insert);
 
        if($insert){
-        echo "Cadastro com sucesso";
-        header('location: Pagamento.php');
+        header('location: Principal.php');
 }
 }
 ?>

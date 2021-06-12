@@ -1,5 +1,6 @@
 <?php 
     include 'php/conexao.php';
+    include 'php/check.php';
     include 'php/select2.php';
     include 'php/check.php';
 ?>
@@ -37,7 +38,9 @@
             $sq=" 
             select * from logging
             as r 
-            inner join registro as p on P.IdRegistro = r.fk_registro
+            inner join registro as p on P.IdRegistro = r.fk_registro 
+            where fk_idProfile=2
+            order by IdLogging DESC
             ";
             $qu=mysqli_query($con,$sq);
             while($f=  mysqli_fetch_assoc($qu)){

@@ -20,28 +20,72 @@
 
 
 <p>
-  <div class="form-group">
-   <div class="form-group">
-        <label class="text-left"><b style="color:black">Nome:</b></label>
-        <input type="text" name="nome" class="form-control col-sm-8" placeholder="Digite o nome completo" required autofocus>
-  </div>
+    <center>
+      <div class="form-group">
+        <label for="pagamento" class="text-left"><b style="color:black">Selecione o pacote:</b></label>
+        <select class="form-control col-sm-8" id="pagamento" name="pacote" required="Selecione o pacote">
+          <option value="">...</option>
+          <?php
+              $sql= mysqli_query($con, "select * from pacote");
+              while($item = mysqli_fetch_assoc($sql))
+              {
+                  $IdPacote = $item['IdPacote'];
+                  $pacote = $item['nomePacote'];
+                  echo "<option value=$IdPacote>$pacote</option>";
+              }
+              ?>
+        </select>
+      </div>  
+    </center>
+    
+    <div class="row">
+        <div class="col">
+          <div class="form-group">
+              <label class="text-left"><b style="color:black">Confira endereço correto:</b></label>
+              <input type="text" name="endereCo" class="form-control " placeholder="Insira o endereço" required autofocus>
+            </div>
+          </div>
 
-  <div class="form-group">
-    <label for="pagamento" class="text-left"><b style="color:black">Selecione o pacote:</b></label>
-    <select class="form-control col-sm-8" id="pagamento" name="pacote" required="Selecione o pacote">
-      <option value="">...</option>
-      <option value="Standart - FREE">Standart</option>
-      <option value="Prime - R$ 1.199,00">Prime</option>
-      <option value="MEGA ULTRA PREMIUM DELUX - R$ 2.299,00">MEGA ULTRA PREMIUM DELUX</option>
-    </select><br/>
-  </div>  
+        <div class="col"> 
+          <div class="form-group">  
+              <label class="text-left"><b style="color:black">CEP:</b></label>
+              <input type="text" name="CEP" class="form-control" placeholder="Insira o CEP" required autofocus>
+            </div>
+          </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+          <label for="pagamento" class="text-left"><b style="color:black">Formas de Pagamento:</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="Boleto" required>
+                <label class="form-check-label" for="pagamento">
+                  Boleto
+                </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="Cartão de Crédito">
+              <label class="form-check-label" for="pagamento">
+                Cartão de Crédito
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pagamento" id="pagamento" value="Pix">
+              <label class="form-check-label" for="pagamento">
+                Pix
+              </label>
+            </div>
+        </div>
+      </div><hr>
 
+    <center>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="dropdownCheck" required>
       <label class="form-check-label" for="dropdownCheck">
         Concordo que li e aceito os termos do serviço e diretrizes
       </label>
     </div>
+    </center>
 
   <br>
 
@@ -49,8 +93,8 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             Fechar
           </button>
-          <button type="submit" class="btn btn-primary" style="color:white; align: left;" name="pag">
-            Registrar
+          <button type="submit" class="btn btn-success" style="color:white; align: left;" name="pag">
+            Finalizar
           </button>
       </div>
 

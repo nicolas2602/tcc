@@ -8,8 +8,8 @@ if(isset($_POST['up'])){
     $preco=$_POST['price'];
         
     if($_FILES['f1']['name']){
-        move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
-        $img="perfil/".$_FILES['f1']['name'];
+        move_uploaded_file($_FILES['f1']['tmp_name'], "produto/".$_FILES['f1']['name']);
+        $img="produto/".$_FILES['f1']['name'];
     }
     else{
         $img=$_POST['img1'];

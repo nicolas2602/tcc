@@ -12,8 +12,8 @@ if(isset($_POST['reg'])){
     
    $registro = $_SESSION['IdRegistro'];
 
-   $i="insert into empresa(fk_IdRegistro,empresa,,cnpj,nomeEmpresa,tservico,endEmpresa,parceria) 
-       values ({$registro},'$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria')";
+   $i="insert into empresa(empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria,fk_IdRegistro) 
+       values ('$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria','$registro')";
 
         mysqli_query($con, $i);
         header ('location:login.php');

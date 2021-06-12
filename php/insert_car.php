@@ -26,8 +26,8 @@
         $preco=$_POST['price'];
 
         if($_FILES['f1']['name']){
-            move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
-            $img="perfil/".$_FILES['f1']['name'];
+            move_uploaded_file($_FILES['f1']['tmp_name'], "produto/".$_FILES['f1']['name']);
+            $img="produto/".$_FILES['f1']['name'];
         }
     
     
@@ -44,7 +44,7 @@
     $quantity = (int)$_POST['quantity'];
     $nomeProduto = $_POST['nomeProduto'];
 
-    $idCompra = 52;
+    $idCompra = 1;
 
     $sqlGetCompra="select * from compra_produto where FK_COMPRA={$idCompra} AND FK_PRODUTO ={$product_id}";
     $queryGetCompra= mysqli_query($con, $sqlGetCompra);

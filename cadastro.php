@@ -230,8 +230,31 @@
                 </div>
             </div>
             <br>
+            <div class="row">
+                <div class="col">
                     <label for="inputEmail">Endereço Empresa: </label>
                     <input type="text" id="endem" class="form-control" name="endem" placeholder="Endereço Empresa" required>
+                </div>
+                
+
+                <div class="col">
+                    <label for="tserviço">Perfil:</label>
+                        <select class="form-control " id="tserviço" name="perfil" required>
+                            <option value="">...</option>
+                            
+                            <?php
+                            $sql= mysqli_query($con, "select * from profile_reg");
+                            while($item = mysqli_fetch_assoc($sql))
+                            {
+                                $IdProfile = $item['idProfile'];
+                                $nameProfile = $item['nameProfile'];
+                                echo "<option value=$IdProfile>$nameProfile</option>";
+                            }
+                            ?>
+                            
+                        </select>
+                </div>
+            </div>
                 <br/>
 
                 <label for="inputEmail">Gostaria de ter uma parceria com a X-MAX? </label>

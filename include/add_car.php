@@ -32,7 +32,7 @@
       <div class='modal-body'>
         
        <img class='img-thumbnail mx-auto d-block border border-secondary rounded-0' id='previewImg' width='211px' height='211px'
-            src='<?php echo $produto[foto_produto]; ?>'>
+            src='foto_produto=[foto_produto];'>
  
         <center>
             <div class='file btn btn-secondary btn-square' style='position: relative; overflow: hidden; border-radius: 0;'>
@@ -45,7 +45,7 @@
                 style='border-radius: 0; position: absolute; font-size: 50px; opacity: 0; right: 0; top: 0;'>
             </div>
         </center>
-        <input type='hidden' name='img1' value='<?php echo $produto[foto_produto]; ?>' id='upload'><br/>
+        <input type='hidden' name='img1' value='foto_produto=[foto_produto];' id='upload'><br/>
 
         <div class='row'>
               <div class='col'>

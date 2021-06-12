@@ -27,7 +27,7 @@ include 'php/select2.php';
 
       <!-- <center><div class="logo"><img src="Imagens/logo1.png" alt="logo"></div></center> -->
 
-            <hr>
+            <hr style="clear: both; visibility: hidden;">
 
         </center>
       <main role="main" class="container col-sm-10">
@@ -65,7 +65,7 @@ include 'php/select2.php';
                 
               <div class="card-body bg-secondary text-white">
                   <h5 class="card-title">Prime</h5>
-                  <h1 class="card-title pricing-card-title">R$ 1.199,00</h1>
+                  <h1 class="card-title pricing-card-title">R$ 200,00</h1>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Programa de escaneamento</li>
@@ -82,7 +82,7 @@ include 'php/select2.php';
               
             <div class="card-body bg-warning text-white">
                 <h5 class="card-title">MEGA ULTRA PREMIUM DELUXE</h5>
-                <h1 class="card-title pricing-card-title">R$ 2.299,00</h1>
+                <h1 class="card-title pricing-card-title">R$ 400,00</h1>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Todas as anteriores (Standart e Premium)</li>
@@ -105,11 +105,11 @@ include 'php/select2.php';
 
           Pagamento
         </a>
-
+</center>
         <?php include 'include/compra.php';?>
 
     </div>
-      </center>
+      
       </main>
         
 
