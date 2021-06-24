@@ -1,5 +1,6 @@
 <?php 
     include 'php/conexao.php';
+    include 'php/check2.php';
     include 'php/insert3.php';
     include 'php/select2.php';
 ?>

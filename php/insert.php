@@ -22,13 +22,13 @@ if(isset($_POST['reg'])){
    if($senha == $rsenha){
          
     $senhacript = base64_encode($senha);
-    if($_FILES['f1']['name']){
-        move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
-        $img="perfil/".$_FILES['f1']['name'];
-    }
+    // if($_FILES['f1']['name']){
+    //     move_uploaded_file($_FILES['f1']['tmp_name'], "perfil/".$_FILES['f1']['name']);
+    //     $img="perfil/".$_FILES['f1']['name'];
+    // }
 
-    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,fk_idProfile) 
-        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','$perfil')";
+    $i="insert into registro(nomeCadastro,dataN,genero,endereco,cidade,estado,cep,tel1,tel2,cpf,emailCadastro,senhaCadastro,imagem,fk_idProfile) 
+        values ('$nome','$dataN','$gen','$end','$city','$estado','$cep','$tel','$tel2','$cpf','$email','$senhacript','perfil/anonimo.png','$perfil')";
                 
         mysqli_query($con, $i);
         header ('location:login.php');    

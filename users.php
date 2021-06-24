@@ -30,7 +30,6 @@
               <th scope="col">Código</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
-              <th scope="col">Perfil</th>
               <th scope="col">Status</th>
               <th scope="col">Ativar ou Desativar</th>
             </tr>
@@ -61,14 +60,6 @@
                   <td>
                     <?php echo $f['emailCadastro']?>
                   </td>
-
-                  <td>
-                    <?php 
-                      if($f['fk_idProfile'] == 2){
-                        echo "Usuário";
-                      }
-                    ?>
-                  </td>
                   
                   <td>
                     <?php   
@@ -80,9 +71,12 @@
                     }
                     ?>
                   </td>
+
                   <td>
-                    <a class="btn btn-success" href="ativar.php?act=<?php echo $f['IdRegistro']?>" onclick="return confirm('Ativar a conta do usuário?')">Ativar</a>
-                    <a class="btn btn-danger" href="desativar.php?dct=<?php echo $f['IdRegistro']?>" onclick="return confirm('Desativar a conta do usuário?')">Desativar</a>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <a class="btn btn-success" href="ativar.php?act=<?php echo $f['IdRegistro']?>" onclick="return confirm('Ativar a conta do usuário?')">ON</a>
+                      <a class="btn btn-danger" href="desativar.php?dct=<?php echo $f['IdRegistro']?>" onclick="return confirm('Desativar a conta do usuário?')">OFF</a>
+                    </div>              
                   </td>
             
               </tr>
