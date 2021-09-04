@@ -33,7 +33,7 @@
                   $pacote = $item['nomePacote'];
                   echo "<option value=$IdPacote>$pacote</option>";
               }
-              ?>
+            ?>
         </select>
       </div>  
     </center>

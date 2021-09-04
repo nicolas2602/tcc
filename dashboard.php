@@ -164,7 +164,7 @@
                 $qu=mysqli_query($con,$sq);
                 $row=mysqli_num_rows($qu);
                 
-                echo"['Premium', $row],";
+                echo"['Prime', $row],";
             ?>
              <?php 
                 $sq="select IdPagamento from paga_pacote where fk_IdPacote=1 order by IdPagamento";

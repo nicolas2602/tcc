@@ -237,7 +237,7 @@
                 </div>
                 
 
-                <div class="col">
+                <!-- <div class="col">
                     <label for="tserviço">Perfil:</label>
                         <select class="form-control " id="tserviço" name="perfil" required>
                             <option value="">...</option>
@@ -253,7 +253,8 @@
                             ?>
                             
                         </select>
-                </div>
+                </div> -->
+
             </div>
                 <br/>
 

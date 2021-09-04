@@ -1,7 +1,7 @@
 <?php
 
 include 'php/conexao.php';
-include 'delete_car.php'
+include 'delete_car.php';
 
 ?>
 
