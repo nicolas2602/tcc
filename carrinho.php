@@ -196,7 +196,6 @@
                     </td>
                     
                 </tr>
-
                 <?php
                     if($compra_produto['QTD_PRODUTO']*$compra_produto['preco']){
                     $total = $total + ($compra_produto['QTD_PRODUTO']*$compra_produto['preco']);

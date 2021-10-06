@@ -3,7 +3,6 @@ include 'conexao.php';
 include 'select2.php';
 
 if(isset($_POST['reg'])){
-   $empresa=$_POST['emp'];
    $cnpj=$_POST['cnpj'];
    $nempresa=$_POST['nempresa'];
    $tserviço=$_POST['tserviço'];
@@ -12,11 +11,11 @@ if(isset($_POST['reg'])){
     
    $registro = $_SESSION['IdRegistro'];
 
-   $i="insert into empresa(empresa,cnpj,nomeEmpresa,tservico,endEmpresa,parceria,fk_IdRegistro) 
-       values ('$empresa','$cnpj','$nempresa','$tserviço','$endem','$parceria','$registro')";
+   $i="insert into empresa(cnpj,nomeEmpresa,tservico,endEmpresa,parceria,fk_IdRegistro) 
+       values ('$cnpj','$nempresa','$tserviço','$endem','$parceria','$registro')";
 
         mysqli_query($con, $i);
-        header ('location:login.php');
+        header ('location:cad_empresa.php');
 
     }
 

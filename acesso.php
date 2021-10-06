@@ -47,7 +47,7 @@
           ?>
               <tr> 
                  <td>
-                    <img src="<?php echo $f['imagem'];?>" width="80px" height="80px">
+                    <img src="<?php echo $f['imagem'];?>" width="40px" height="40px">
                  </td>
 
                   <td>
