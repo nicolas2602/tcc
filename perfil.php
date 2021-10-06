@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,11 +54,11 @@
                       
                 </div>
             </div>  
-                        <div class="btn-group">
-                            <a href="Principal.php" type="button" class="btn btn-primary">
-                                Voltar
-                            </a>
-                        </div>
+            <div class="btn-group">
+                <a href="Principal.php" type="button" class="btn btn-primary">
+                    Voltar
+                </a>
+            </div>
         </div>
         
     </body>

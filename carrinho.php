@@ -8,7 +8,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -209,7 +209,7 @@
                     <td colspan="2" align="right" class="table-secondary"><strong>TOTAL:</strong></td>
                     <td><strong>R$ <?php echo number_format($total, 2); ?></strong></td>
                     <input type="hidden" name="idcompra" value="<?=$compra_produto['ID_COMPRA']?> ">  
-                   <input type="hidden" name="totalProd" value="<?=number_format($total=$total + ($compra_produto['QTD_PRODUTO']*$compra_produto['preco']))?> ">            
+                   <input type="hidden" name="totalProd" value="<?=$total;?> ">            
                 </tr>
             
                 </table>

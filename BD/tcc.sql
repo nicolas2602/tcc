@@ -1,4 +1,4 @@
-Create Database tcc;
+-- Create Database tcc;
 ------------------------------------------------------------------------
 CREATE TABLE registro( 
 IdRegistro int PRIMARY KEY AUTO_INCREMENT, 

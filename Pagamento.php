@@ -5,7 +5,8 @@
 ?>
 
 
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
     <title>Avaliação</title>
     <meta charset="UTF-8">

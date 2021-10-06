@@ -2,23 +2,23 @@
     
     include 'conexao.php';
 
-    $sq=
-    "
-    select * from produto as p
-    left join compra_produto as cp on cp.FK_PRODUTO = P.ID_PRODUTO
-    ";
+    // $sq=
+    // "
+    // select * from produto as p
+    // left join compra_produto as cp on cp.FK_PRODUTO = P.ID_PRODUTO
+    // ";
 
-    $qu=mysqli_query($con,$sq);
-    $produto=mysqli_fetch_assoc($qu);
+    // $qu=mysqli_query($con,$sq);
+    // $produto=mysqli_fetch_assoc($qu);
 
-    $sq=
-    "
-    SELECT * FROM compra_produto as cp
-    inner join compra as c on c.ID_COMPRA = cp.FK_COMPRA
-    inner join produto as p on p.ID_PRODUTO = cp.FK_PRODUTO
-    ";
-    $qu=mysqli_query($con,$sq);
-    $compra_produto=mysqli_fetch_assoc($qu);
+    // $sq=
+    // "
+    // SELECT * FROM compra_produto as cp
+    // inner join compra as c on c.ID_COMPRA = cp.FK_COMPRA
+    // inner join produto as p on p.ID_PRODUTO = cp.FK_PRODUTO
+    // ";
+    // $qu=mysqli_query($con,$sq);
+    // $compra_produto=mysqli_fetch_assoc($qu);
 
     if(isset($_POST['add'])){
         
@@ -44,7 +44,7 @@
     $quantity = (int)$_POST['quantity'];
     $nomeProduto = $_POST['nomeProduto'];
 
-    $idCompra = 2;
+    $idCompra = 1;
 
     $sqlGetCompra="select * from compra_produto where FK_COMPRA={$idCompra} AND FK_PRODUTO ={$product_id}";
     $queryGetCompra= mysqli_query($con, $sqlGetCompra);
